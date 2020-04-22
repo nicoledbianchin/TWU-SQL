@@ -1,0 +1,25 @@
+3 - What books and movies aren't checked out?
+
+Query:
+SELECT title 
+FROM book 
+LEFT JOIN checkout_item ON book.id = checkout_item.book_id 
+WHERE checkout_item.book_id IS NULL;
+
+SELECT title 
+FROM movie 
+LEFT JOIN checkout_item ON movie.id = checkout_item.movie_id 
+WHERE checkout_item.movie_id IS NULL;
+
+Answer: 
+Fellowship of the Ring
+1984
+Tom Sawyer
+Catcher in the Rye
+To Kill a Mockingbird
+Domain Driven Design
+
+Thin Red Line
+Crouching Tiger, Hidden Dragon
+Lawrence of Arabia
+Office Space

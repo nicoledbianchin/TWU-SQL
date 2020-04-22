@@ -1,0 +1,9 @@
+5 - Who has checked out more than 1 item? 
+
+Query:
+SELECT member_id, count(book_id), count(movie_id) 
+FROM checkout_item 
+GROUP BY member_id;
+
+Answer:
+Anand Beck

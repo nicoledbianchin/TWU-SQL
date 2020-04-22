@@ -1,0 +1,10 @@
+2 - How many people have not checked out anything?
+
+Query:
+SELECT name
+FROM member, checkout_item
+WHERE member.id NOT IN 
+    (SELECT member_id FROM checkout_item);
+
+Answer:
+27
